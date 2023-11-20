@@ -1,6 +1,10 @@
-// Inside UserListView.js
 import React, { useState, useEffect } from 'react';
 import employeeData from '../employeeData'; // Adjust the path as needed
+import homeIcon from '../style/house.png'; // Update the path to your home icon image
+import userListIcon from '../style/user.png';
+import icon from '../components/moptro logo.png'; // Update the path to your logo icon image
+import userIcon from '../components/Group 46.png'; // Update the path to your user icon image
+import { Link } from 'react-router-dom';
 import '../style/userlist.css'; // Make sure to include the CSS file for styling
 
 const UserListView = () => {
@@ -8,13 +12,10 @@ const UserListView = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    // Initialize the employee list with dummy data
     setEmployeeList(employeeData);
   }, []);
 
   const handleSearch = () => {
-    // Implement search logic based on the employee name
-    // Filtered list based on the search query
     const filteredList = employeeData.filter((employee) =>
       employee.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
@@ -23,16 +24,18 @@ const UserListView = () => {
 
   return (
     <div className="user-list-view">
+      <div className="header">
+        <img src={icon} alt="Logo" className="header-logo" />
+        <img src={userIcon} alt="User" className="user-icon" />
+      </div>
       <div className="search-bar">
         <input
           type="text"
           value={searchQuery}
           placeholder="Search with name"
           onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
         />
-        <button type="button" onClick={handleSearch}>
-          🔍 {/* You can replace this with an actual search icon */}
-        </button>
       </div>
       <div className="employee-list">
         {employeeList.map((employee) => (
@@ -40,8 +43,12 @@ const UserListView = () => {
             <div className="employee-info">
               <p><strong>EMP ID:</strong> {employee.id}</p>
               <p><strong>Name:</strong> {employee.name}</p>
-              <p><strong>DOB:</strong> {employee.dob}</p>
-              <p><strong>Role:</strong> {employee.role}</p>
+              <div className="employee-dob-line">
+                <strong>DOB:</strong> <span className="employee-dob">{employee.dob}</span>
+              </div>
+              <div className="employee-role-line">
+                <strong>Role:</strong> <span className="employee-role">{employee.role}</span>
+              </div>
             </div>
             <div className="employee-number">
               <span>{employee.number}</span>
@@ -49,6 +56,20 @@ const UserListView = () => {
           </div>
         ))}
       </div>
+      <nav className='nav-container'>
+        <ul>
+          <li>
+            <Link to="/dashboard">
+              <p className='title'>Home</p><img src={homeIcon} alt="Dashboard" className="nav-icon" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/user-list">
+            <p className='title'>User</p><img src={userListIcon} alt="User List" className="nav-icon" />
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };

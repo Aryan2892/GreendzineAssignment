@@ -1,61 +1,178 @@
-/* UserList.css */
+.header {
+  display: flex;
+  justify-content: center; /* Center the logo */
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #121212; /* Adjust to match your desired header background color */
+  position: relative; /* This allows absolute positioning relative to the header */
+}
+
+.header-logo {
+  /* Adjust the logo size if needed */
+  width: 100px; /* Example size, adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.user-icon {
+  position: absolute; /* Position the user icon absolutely within the header */
+  top: 0px; /* Distance from the top of the header */
+  right: 5px; /* Distance from the right of the header */
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+}
+
+
 
 .user-list-view {
-    color: white;
-    background-color: #121212; /* Dark background */
-    padding: 20px;
-  }
+  padding-top: 120px; /* Adjust this value so that the content doesn't overlap with the header */
+  color: white;
+  background-color: #000000; /* Updated to match the screenshot */
+  padding: 50px;
+}
+
+.search-bar {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Search Input Field Styles */
+.search-bar input {
+  width: calc(100% - 40px); /* Adjust width to allow for icon space */
+  padding: 10px 20px; /* Padding on all sides */
+  margin-bottom: 20px; 
+  margin-top: 20px; 
+  border-radius: 20px; /* Rounded corners */
+  border: none; /* No border */
+  background-color: #333; /* Dark background for the input */
+  color: white; /* Text color */
+  background-repeat: no-repeat; /* No repeat for background images */
+  background-position: 10px center; /* Position the icon inside the input */
+  background-size: 20px; /* Size of the icon inside the input */
+}
+
+.employee-card {
+  background-color: #222; /* Dark background for the card */
+  padding: 15px; /* Padding inside the card */
+  border-radius: 10px; /* Rounded corners for the card */
+  display: flex; /* Flexbox layout for the card contents */
+  justify-content: space-between; /* Space out child elements */
+  align-items: center; /* Vertically center align child elements */
+  margin-bottom: 10px; /* Space below each card */
+  position: relative; 
+}
+
+
+.search-bar button {
+  display: flex;
   
-  .search-bar {
-    position: relative;
-    margin-bottom: 20px;
-  }
+}
+
+.employee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
   
-  .search-bar input {
-    width: 100%;
+}
+
+.employee-info p {
+  margin: 5px 0;
+  margin-bottom: 30px; 
+  
+}
+
+.employee-number {
+  
+  background-color: #191a19; /* New accent color */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Position the number absolutely within the card */
+  top: 10px; /* Adjust as needed to move it from the top of the card */
+  right: 10px;
+}
+
+/* ... other styles remain unchanged ... */
+
+nav {
+  display: flex;
+  justify-content: space-evenly; /* Distributes children with even space around them */
+  align-items: center;
+  background: transparent linear-gradient(262deg, #0F2323 0%, #0F2323 100%) no-repeat padding-box;
+  box-shadow: inset 8px 4px 4px #00000040;
+  border: 1px solid #0F2323;
+  padding: 10px 20px;
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; 
+}
+
+nav li {
+  /* Removed the margin-top property */
+  margin: 0 10px; /* Space out list items */
+}
+
+.nav-icon {
+  /* Removed the margin-top property */
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+  display: block; /* Treat the icons as block elements to fill the link area */
+}
+
+
+.title{
+  display: flex;
+  opacity: 0;
+  color: #cc6c12; 
+}
+
+.employee-dob {
+  color: #cc6c12; /* Replace with the color you want for DOB */
+  margin-bottom: 10px; 
+}
+
+.employee-role {
+  color: #36A546CC; /* Replace with the color you want for Role */
+  margin-bottom: 10px; 
+}
+
+.employee-dob-line{
+  margin-bottom: 30px; 
+}
+
+.employee-dob,
+.employee-role {
+  margin: 0; 
+  margin-bottom: 10px; /* Removes default paragraph margin */
+  /* Add additional styling as needed */
+}
+
+@media only screen and (max-width: 412px) and (max-height: 914px) {
+  .dashboard-container {
+    /* Adjust styles for smaller screens */
     padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    border: none;
-    background-color: #333;
-    color: white;
   }
-  
-  .search-bar button {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: white;
+
+  /* Add more responsive styles as needed */
+}
+
+/* Responsive styles for 390 X 834 px (Supports most iOS devices) */
+@media only screen and (max-width: 390px) and (max-height: 834px) {
+  .dashboard-container {
+    /* Adjust styles for smaller screens */
+    padding: 8px;
   }
-  
-  .employee-list {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .employee-card {
-    background-color: #222;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .employee-info p {
-    margin: 5px 0;
-  }
-  
-  .employee-number {
-    background-color: green; /* Replace with the actual color from the design */
-    border-radius: 50%;
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
