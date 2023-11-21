@@ -8,8 +8,9 @@
   position: relative;
 }
 
+/* Reduce the size of the image logo */
 .header-logo {
-  width: 300px;
+  max-width: 200px; /* Adjust the maximum width as needed */
   height: auto;
 }
 
