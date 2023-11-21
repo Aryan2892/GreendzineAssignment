@@ -29,7 +29,7 @@ body {
   }
   
   input {
-    width: 100%; 
+    width: 90%; 
     height: 45px;
     background: rgba(31, 25, 22, 0.4); 
     border: none; 
