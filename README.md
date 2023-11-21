@@ -1,14 +1,14 @@
 # GreendzineAssignment
 
 ## Project Overview
-GreendzineAssignment is a React-based web application designed to showcase modern web development practices. This project demonstrates efficient state management, responsive design, and integration with external APIs, making it an ideal template for both educational purposes and as a starting point for similar web applications.
+GreendzineAssignment is a React-based web application designed to showcase modern web development practices. This project demonstrates efficient state management, responsive design, and integration with external APIs.
 
 ## Features
 - Responsive Web Design: Ensures a seamless experience across various devices and screen sizes.
 - State Management: Utilizes React's state management to handle user interactions efficiently.
 - API Integration: Demonstrates how to integrate and consume external APIs.
 - Interactive UI: Offers an engaging and interactive user interface.
-- [Add any other specific features of your project here.]
+
 
 ## Installation
 To set up this project locally, follow these steps:
