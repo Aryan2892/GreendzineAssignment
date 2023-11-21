@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import employeeData from '../employeeData'; // Adjust the path as needed
-import homeIcon from '../style/house.png'; // Update the path to your home icon image
+import employeeData from '../employeeData'; 
+import homeIcon from '../style/house.png'; 
 import userListIcon from '../style/user.png';
-import icon from '../components/moptro logo.png'; // Update the path to your logo icon image
-import userIcon from '../components/Group 46.png'; // Update the path to your user icon image
+import icon from '../components/moptro logo.png'; 
+import userIcon from '../components/Group 46.png'; 
 import { Link } from 'react-router-dom';
-import '../style/userlist.css'; // Make sure to include the CSS file for styling
+import '../style/userlist.css';
 
 const UserListView = () => {
   const [employeeList, setEmployeeList] = useState([]);

@@ -36,7 +36,7 @@ const Dashboard = () => {
         ))}
       </div>
 
-    <div className="nav-container"> {/* New container for navigation icons */}
+    <div className="nav-container"> 
         <nav>
           <ul>
             <li>

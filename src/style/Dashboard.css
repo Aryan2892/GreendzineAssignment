@@ -1,11 +1,12 @@
-/* Dashboard.css */
 
-body, html {
+
+body,
+html {
   height: 100%;
   margin: 0;
   background: #121212;
   color: #ffffff;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .dashboard-container {
@@ -22,7 +23,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   position: relative;
 }
 
@@ -33,51 +34,63 @@ body, html {
 }
 
 .dashboard-image-center {
-  width: 90px; /* Adjust the size as needed */
-  margin-bottom: 10px; /* Add space between the image and h2 tag */
+  width: 90px; 
+  margin-bottom: 10px; 
 }
 
 .dashboard-image-top-right {
-  width: 50px; /* Adjust the size as needed */
+  width: 50px; 
   height: auto;
   margin-left: auto;
-  margin-right: 0; /* Reset margin-right */
-  order: -1; /* Move it to the top */
+  margin-right: 0; 
+  order: -1; 
 }
 
 .dashboard-title {
-  font-size: 24px;
+  font-size: 18px;
   color: #ffffff;
-  margin: 20px 0;
+  margin: 0;
+  margin-bottom: -20px;
+  padding: 20px 15px;
   text-align: center;
+  background-color: #1a2c2c;
+  border-radius: 40px;
 }
 
 .nav-indicator {
-  width: 50%; /* Adjust the width of the indicator */
+  width: 50%; 
   height: 100%;
-  background-color: #00ff26; /* Color of the indicator */
-  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  background-color: #00ff26; 
+  transition: transform 0.3s ease; 
 }
 
-
 .nav-container {
-  background: transparent linear-gradient(262deg, #0F2323 0%, #0F2323 40%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(262deg, #0f2323 0%, #0f2323 40%) 0% 0%
+    no-repeat padding-box;
   box-shadow: inset 8px 4px 4px #00000040;
   mix-blend-mode: normal;
-  border: 1px solid #0F2323;
+  border: 1px solid #0f2323;
   opacity: 1;
-  width: 100%; /* Set the width to 100% */
+  width: 90%; 
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  justify-content: center; 
+  align-items: center; 
   flex-direction: column;
   height: 100%;
   position: relative;
 }
 
+.nav-container ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: space-between;
+}
+
 nav {
+  border-radius: 20px;
   margin-top: auto;
   flex-grow: 1;
+  width: 100%;
   position: relative;
 }
 
@@ -91,6 +104,11 @@ nav ul {
   position: relative;
 }
 
+.nav ul li {
+  box-sizing: border-box;
+  width: 50%;
+}
+
 .nav-indicator {
   position: absolute;
   top: 0;
@@ -102,9 +120,8 @@ nav ul {
   align-items: center;
   width: 24px;
   height: 24px;
-  fill: #36A546
+  fill: #36a546;
 }
-
 
 .progress-bar-container {
   width: 100%;
@@ -130,7 +147,20 @@ nav ul {
   width: 0%;
 }
 
-/* Optional: Add a gradient to the progress bar for a more polished look */
 .progress-bar-inner {
   background: linear-gradient(to right, #4caf50, #7cb342);
+}
+
+.content::before {
+  filter: blur(2px);
+}
+
+.content {
+  background-color: #5e5e5e2a;
+  padding: 40px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-bottom: 40px;
 }
