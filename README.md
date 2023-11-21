@@ -37,7 +37,7 @@ Contributions to the GreendzineAssignment project are welcome! If you have sugge
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the license terms.
 
 ## Contact
-For questions, feedback, or discussions regarding the project, please contact 
+For questions, feedback, or discussions regarding the project, please contact <br>
 [Aryan Bhasein - aryan.bhasein20@st.niitunviersity.in].
 
 
